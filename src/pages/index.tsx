@@ -1,5 +1,6 @@
 import Head from 'next/head'
-import WithSubnavigation from '@/components/navbar'
+import WithSubnavigation from '@/components/navbar/index'
+import SmallCentered from '@/components/footer'
 
 export default function Home() {
   return (
@@ -12,7 +13,9 @@ export default function Home() {
       </Head>
       <main>
         <WithSubnavigation/>
+        <SmallCentered/>
       </main>
+
     </>
   )
 }
