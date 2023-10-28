@@ -1,4 +1,5 @@
 'use client'
+import { Image } from '@chakra-ui/react';
 
 import {
   Box,
@@ -37,7 +38,7 @@ export default function WithSubnavigation() {
         borderBottom={1}
         borderStyle={'solid'}
         borderColor={useColorModeValue('gray.200', 'gray.900')}
-        align={'center'}>
+        alignItems="center">
         <Flex
           flex={{ base: 1, md: 'auto' }}
           ml={{ base: -2 }}
@@ -54,7 +55,7 @@ export default function WithSubnavigation() {
             textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
             fontFamily={'heading'}
             color={useColorModeValue('gray.800', 'white')}>
-            Logo
+            <Image src="/images/Alain_Terrieur_Logo_noback.png" alt="Logo" width='200px' height='auto' />
           </Text>
 
           <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
@@ -67,21 +68,19 @@ export default function WithSubnavigation() {
           justify={'flex-end'}
           direction={'row'}
           spacing={6}>
-          <Button as={'a'} fontSize={'sm'} fontWeight={400} variant={'link'} href={'#'}>
-            Sign In
-          </Button>
+            
           <Button
             as={'a'}
             display={{ base: 'none', md: 'inline-flex' }}
             fontSize={'sm'}
             fontWeight={600}
             color={'white'}
-            bg={'pink.400'}
+            bg={'#55BBFF'}
             href={'#'}
             _hover={{
-              bg: 'pink.300',
+              bg: '#1970f1',
             }}>
-            Sign Up
+            Nous contacter
           </Button>
         </Stack>
       </Flex>
@@ -118,7 +117,6 @@ const DesktopNav = () => {
                 {navItem.label}
               </Box>
             </PopoverTrigger>
-
             {navItem.children && (
               <PopoverContent
                 border={0}
@@ -195,6 +193,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
         py={2}
         as="a"
         href={href ?? '#'}
+        display="flex"
         justifyContent="space-between"
         alignItems="center"
         _hover={{
@@ -243,41 +242,25 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: 'Inspiration',
+    label: 'Accueil',
     children: [
       {
-        label: 'Explore Design Work',
-        subLabel: 'Trending Design to inspire you',
-        href: '#',
-      },
-      {
-        label: 'New & Noteworthy',
-        subLabel: 'Up-and-coming Designers',
+        label: 'Notre page de bienvenue',
+        subLabel: 'Bienvenue sur notre site !',
         href: '#',
       },
     ],
   },
   {
-    label: 'Find Work',
+    label: 'Nos services',
     children: [
       {
-        label: 'Job Board',
-        subLabel: 'Find your dream design job',
+        label: 'Découvrir',
+        subLabel: 'Trouvez ce qui vous convient le mieux, nous somme là pour ça',
         href: '#',
       },
-      {
-        label: 'Freelance Projects',
-        subLabel: 'An exclusive list for contract work',
-        href: '#',
-      },
+
     ],
   },
-  {
-    label: 'Learn Design',
-    href: '#',
-  },
-  {
-    label: 'Hire Designers',
-    href: '#',
-  },
-]
+];
+
