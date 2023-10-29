@@ -9,7 +9,6 @@ import { useState } from 'react';
 import { Box, Input, Checkbox, Heading, Text} from '@chakra-ui/react';
 
 export default function Home() {
-  const [showPricing, setShowPricing] = useState(false);
   const [simulationPrice, setSimulationPrice] = useState('');
   const [selectedOption, setSelectedOption] = useState('Rénovation de cuisine');
   const [pricePerSquareMeter, setPricePerSquareMeter] = useState(200);
@@ -70,7 +69,6 @@ export default function Home() {
 
 
   const scrollToPricing = () => {
-    setShowPricing(true);
     window.scrollTo({
       top: document.body.scrollHeight,
       behavior: 'smooth',
