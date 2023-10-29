@@ -33,7 +33,7 @@ const Feature = ({ title, text, icon }: FeatureProps) => {
 
 export default function SimpleThreeColumns() {
     return (
-        <Box p={20}>
+        <Box p={20} id='sectionEnSavoirPlus'>
             <SimpleGrid columns={{ base: 1, md: 3 }} spacing={20}>
                 <Feature
                     icon={<Icon as={FcBusinessman} w={10} h={10} />}
@@ -58,8 +58,6 @@ export default function SimpleThreeColumns() {
                         "Nous savons que le temps est précieux. Notre équipe garantit des délais d'exécution optimaux pour que vous puissiez profiter de votre espace rénové en un rien de temps."
                     }
                 />
-
-
 
             </SimpleGrid>
         </Box>

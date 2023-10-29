@@ -1,5 +1,5 @@
 'use client'
-
+import Link from 'next/link';
 import {
     Flex,
     Container,
@@ -846,17 +846,20 @@ export default function CallToActionWithIllustration() {
                     Suivez l'avancement de vos travaux et recevez des conseils avisés. Notre objectif est votre satisfaction.
                 </Text>
                 <Stack spacing={6} direction={'row'}>
+                    <Link href='/services'>
+                        <Button
+                            rounded={'full'}
+                            px={6}
+                            colorScheme={'orange'}
+                            bg={'#55BBFF'}
+                            _hover={{ bg: '#1970f1' }}>
+                            Commencer
+                        </Button>
+                    </Link>
                     <Button
                         rounded={'full'}
                         px={6}
-                        colorScheme={'orange'}
-                        bg={'#55BBFF'}
-                        _hover={{ bg: '#1970f1' }}>
-                        Commencer
-                    </Button>
-                    <Button rounded={'full'} px={6}>
-                        En savoir plus
-                    </Button>
+                    />
                 </Stack>
                 <Flex w={'full'}>
                     <Illustration height={{ sm: '24rem', lg: '28rem' }} mt={{ base: 12, sm: 16 }} />

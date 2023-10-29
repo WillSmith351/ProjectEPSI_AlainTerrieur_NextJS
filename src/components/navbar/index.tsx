@@ -1,4 +1,5 @@
 'use client'
+import Link from 'next/link'
 import { Image } from '@chakra-ui/react';
 import {
   Box,
@@ -250,11 +251,11 @@ interface NavItem {
 const NAV_ITEMS: Array<NavItem> = [
   {
     label: 'Accueil',
-    href: '#',
+    href: '/',
   },
   {
     label: 'Nos services',
-    href: '#',
+    href: '/services',
   },
 ];
 
