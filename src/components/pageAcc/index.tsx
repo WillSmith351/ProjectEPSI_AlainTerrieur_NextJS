@@ -10,6 +10,7 @@ import {
     Icon,
     IconProps,
 } from '@chakra-ui/react'
+import { useRef } from 'react';
 
 const Illustration = (props: IconProps) => {
     return (
@@ -824,47 +825,38 @@ const Illustration = (props: IconProps) => {
     )
 }
 
-export default function CallToActionWithIllustration() {
+
+
+export default function CallToActionWithIllustration({ scrollToContact }: { scrollToContact: () => void }) {
     return (
         <Container maxW={'5xl'}>
-            <Stack
-                textAlign={'center'}
-                align={'center'}
-                spacing={{ base: 8, md: 10 }}
-                py={{ base: 20, md: 28 }}>
-                <Heading
-                    fontWeight={600}
-                    fontSize={{ base: '3xl', sm: '4xl', md: '6xl' }}
-                    lineHeight={'110%'}>
+            <Stack textAlign={'center'} align={'center'} spacing={{ base: 8, md: 10 }} py={{ base: 20, md: 28 }}>
+                <Heading fontWeight={600} fontSize={{ base: '3xl', sm: '4xl', md: '6xl' }} lineHeight={'110%'}>
                     Vos projets de construction réalisés en toute{' '}
                     <Text as={'span'} color={'#55BBFF'}>
                         simplicité
                     </Text>
                 </Heading>
                 <Text color={'gray.500'} maxW={'3xl'}>
-                    Confiez-nous vos projets de construction en toute confiance. Nous sommes là pour vous accompagner à chaque étape.
-                    Suivez l'avancement de vos travaux et recevez des conseils avisés. Notre objectif est votre satisfaction.
+                    Confiez-nous vos projets de construction en toute confiance. Nous sommes là pour vous accompagner à chaque étape. Suivez l'avancement de vos travaux et recevez des conseils avisés. Notre objectif est votre satisfaction.
                 </Text>
                 <Stack spacing={6} direction={'row'}>
-                    <Link href='/services'>
-                        <Button
-                            rounded={'full'}
-                            px={6}
-                            colorScheme={'orange'}
-                            bg={'#55BBFF'}
-                            _hover={{ bg: '#1970f1' }}>
+                    <Link href="/services">
+                        <Button rounded={'full'} px={6} colorScheme={'orange'} bg={'#55BBFF'} _hover={{ bg: '#1970f1' }}>
                             Commencer
                         </Button>
                     </Link>
-                    <Button
-                        rounded={'full'}
-                        px={6}
-                    />
+                    <Button rounded={'full'} px={6} onClick={scrollToContact}>
+                        En savoir plus
+                    </Button>
                 </Stack>
                 <Flex w={'full'}>
                     <Illustration height={{ sm: '24rem', lg: '28rem' }} mt={{ base: 12, sm: 16 }} />
                 </Flex>
             </Stack>
         </Container>
-    )
+    );
 }
+
+
+
