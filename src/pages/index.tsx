@@ -1,6 +1,11 @@
 import Head from 'next/head'
 import WithSubnavigation from '@/components/navbar/index'
 import SmallCentered from '@/components/footer'
+import CallToActionWithIllustration from '@/components/pageAcc'
+import CaptionCarousel from '@/components/caroussel'
+import SimpleThreeColumns from '@/components/about'
+import TestimonialContent from '@/components/testimonials'
+import Contact from '@/components/contact'
 
 export default function Home() {
   return (
@@ -13,6 +18,11 @@ export default function Home() {
       </Head>
       <main>
         <WithSubnavigation/>
+        <CallToActionWithIllustration/>
+        <CaptionCarousel/>
+        <SimpleThreeColumns/>
+        <TestimonialContent/>
+        <Contact/>
         <SmallCentered/>
       </main>
 
