@@ -19,6 +19,7 @@
     "react-dom": "^18",
     "react-icons": "^4.11.0",
     "react-slick": "^0.29.0",
+    "react-slide": "^0.3.0",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {

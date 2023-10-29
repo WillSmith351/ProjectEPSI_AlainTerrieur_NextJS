@@ -103,60 +103,59 @@ export default function WithSpeechBubbles() {
         <Box bg={useColorModeValue('gray.100', 'gray.700')}>
             <Container maxW={'7xl'} py={16} as={Stack} spacing={12}>
                 <Stack spacing={0} align={'center'}>
-                    <Heading>Our Clients Speak</Heading>
-                    <Text>We have been working with clients around the world</Text>
+                    <Heading>Témoignages de Nos Clients</Heading>
+                    <Text>Découvrez les retours de nos clients !</Text>
+
                 </Stack>
                 <Stack
                     direction={{ base: 'column', md: 'row' }}
                     spacing={{ base: 10, md: 4, lg: 10 }}>
                     <Testimonial>
                         <TestimonialContent>
-                            <TestimonialHeading>Efficient Collaborating</TestimonialHeading>
+                            <TestimonialHeading>Rénovation Salle de Bain</TestimonialHeading>
                             <TestimonialText>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed
-                                imperdiet nibh lectus feugiat nunc sem.
+                                Je suis ravis de la rénovation de ma salle de bains réalisée par votre entreprise. Le résultat est  spectaculaire. Votre équipe a fait preuve de professionnalisme à chaque étape du projet, et je suis très satisfait de la qualité du travail. Merci pour cette incroyable transformation de ma salle de bains.
                             </TestimonialText>
                         </TestimonialContent>
+
                         <TestimonialAvatar
-                            src={
-                                'https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80'
-                            }
-                            name={'Jane Cooper'}
-                            title={'CEO at ABC Corporation'}
+                            src={'https://this-person-does-not-exist.com/img/avatar-gen796aaebd69bdd0db0b4b3c0fdd738cba.jpg'}
+                            name={'Jean Dupont'}
+                            title={'Directeur Général chez Dupont Construction'}
                         />
                     </Testimonial>
+
                     <Testimonial>
                         <TestimonialContent>
-                            <TestimonialHeading>Intuitive Design</TestimonialHeading>
+                            <TestimonialHeading>Un Salon Rénové à la Perfection</TestimonialHeading>
                             <TestimonialText>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed
-                                imperdiet nibh lectus feugiat nunc sem.
+                                Votre entreprise a été une source de bons conseils en matière de design. Vos idées intuitives ont donné une toute nouvelle vie à mon salon. Le résultat final correspond parfaitement à mes attentes. Merci pour cette incroyable transformation.
                             </TestimonialText>
                         </TestimonialContent>
+
                         <TestimonialAvatar
-                            src={
-                                'https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80'
-                            }
-                            name={'Jane Cooper'}
-                            title={'CEO at ABC Corporation'}
+                            src={'https://this-person-does-not-exist.com/img/avatar-genec3a02c019afc569abe5c98dc81b3ee6.jpg'}
+                            name={'Marie Lefebvre'}
+                            title={'Designer chez Lefebvre Décor'}
                         />
                     </Testimonial>
+
                     <Testimonial>
                         <TestimonialContent>
-                            <TestimonialHeading>Mindblowing Service</TestimonialHeading>
+                            <TestimonialHeading>Rénovation cuisine</TestimonialHeading>
                             <TestimonialText>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed
-                                imperdiet nibh lectus feugiat nunc sem.
+                                La rénovation de ma cuisine avec votre entreprise a été exceptionnelle. Votre professionnalisme et la qualité du travail ont dépassé mes attentes. Merci pour cette transformation incroyable.
                             </TestimonialText>
                         </TestimonialContent>
+
+
                         <TestimonialAvatar
-                            src={
-                                'https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80'
-                            }
-                            name={'Jane Cooper'}
-                            title={'CEO at ABC Corporation'}
+                            src={'https://this-person-does-not-exist.com/img/avatar-gen5fe498c19eec256ac3817e414072706f.jpg'}
+                            name={'Pierre Tremblay'}
+                            title={'Propriétaire chez Tremblay Rénovation'}
                         />
                     </Testimonial>
+
                 </Stack>
             </Container>
         </Box>

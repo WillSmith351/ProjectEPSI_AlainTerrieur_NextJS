@@ -44,7 +44,7 @@ export default function Contact() {
                                 <Box>
                                     <Heading>Contact</Heading>
                                     <Text mt={{ sm: 3, md: 3, lg: 5 }} color="#55bbff">
-                                        Fill up the form below to contact
+                                        Remplir le formulaire pour nous contacter
                                     </Text>
                                     <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
                                         <VStack pl={0} spacing={3} alignItems="flex-start">
@@ -54,6 +54,7 @@ export default function Contact() {
                                                 width="300px"
                                                 variant="ghost"
                                                 color="#55BBFF"
+                                                justifyContent={'left'}
                                                 _hover={{ border: '2px solid #1970f1' }}
                                                 leftIcon={<MdPhone color="#55bbff" size="20px" />}>
                                                 +33 06 85 95 84 71
@@ -64,6 +65,7 @@ export default function Contact() {
                                                 width="300px"
                                                 variant="ghost"
                                                 color="#55BBFF"
+                                                justifyContent={'left'}
                                                 _hover={{ border: '2px solid #1970f1' }}
                                                 leftIcon={<MdEmail color="#55BBFF" size="20px" />}>
                                                 Alain.terrieur@gmail.com
@@ -74,6 +76,7 @@ export default function Contact() {
                                                 width="300px"
                                                 variant="ghost"
                                                 color="#55BBFF"
+                                                justifyContent={'left'}
                                                 _hover={{ border: '2px solid #1970f1' }}
                                                 leftIcon={<MdLocationOn color="#55bbff" size="20px" />}>
                                                 Montcuq, France

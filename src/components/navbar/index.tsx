@@ -1,6 +1,5 @@
 'use client'
 import { Image } from '@chakra-ui/react';
-
 import {
   Box,
   Flex,
@@ -16,16 +15,16 @@ import {
   useColorModeValue,
   useBreakpointValue,
   useDisclosure,
-} from '@chakra-ui/react'
+} from '@chakra-ui/react';
 import {
   HamburgerIcon,
   CloseIcon,
   ChevronDownIcon,
   ChevronRightIcon,
-} from '@chakra-ui/icons'
+} from '@chakra-ui/icons';
 
 export default function WithSubnavigation() {
-  const { isOpen, onToggle } = useDisclosure()
+  const { isOpen, onToggle } = useDisclosure();
 
   return (
     <Box>
@@ -38,11 +37,14 @@ export default function WithSubnavigation() {
         borderBottom={1}
         borderStyle={'solid'}
         borderColor={useColorModeValue('gray.200', 'gray.900')}
-        alignItems="center">
+        alignItems={'center'}
+      >
         <Flex
           flex={{ base: 1, md: 'auto' }}
           ml={{ base: -2 }}
-          display={{ base: 'flex', md: 'none' }}>
+          display={{ base: 'flex', md: 'none' }}
+          alignItems={'center'}
+        >
           <IconButton
             onClick={onToggle}
             icon={isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />}
@@ -54,11 +56,12 @@ export default function WithSubnavigation() {
           <Text
             textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
             fontFamily={'heading'}
-            color={useColorModeValue('gray.800', 'white')}>
-            <Image src="/images/Alain_Terrieur_Logo_noback.png" alt="Logo" width='200px' height='auto' />
+            color={useColorModeValue('gray.800', 'white')}
+          >
+            <Image src="/images/Alain_Terrieur_Logo_noback.png" alt="Logo" width='14rem' height='auto' />
           </Text>
 
-          <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
+          <Flex display={{ base: 'none', md: 'flex' }} ml={10}  alignItems={'center'}>
             <DesktopNav />
           </Flex>
         </Flex>
@@ -67,21 +70,22 @@ export default function WithSubnavigation() {
           flex={{ base: 1, md: 0 }}
           justify={'flex-end'}
           direction={'row'}
-          spacing={6}>
-            
+          spacing={6}
+        >
           <Button
             as={'a'}
             display={{ base: 'none', md: 'inline-flex' }}
             fontSize={'sm'}
             fontWeight={600}
             color={'white'}
-            bg={'#55BBFF'}
+            bg={'#55bbff'}
             href={'#'}
             _hover={{
-              bg: '#1970f1',
+              bg: '#0D74FF',
             }}>
             Nous contacter
           </Button>
+
         </Stack>
       </Flex>
 
@@ -89,8 +93,11 @@ export default function WithSubnavigation() {
         <MobileNav />
       </Collapse>
     </Box>
-  )
+  );
 }
+
+// Le reste du code reste inchangé.
+
 
 const DesktopNav = () => {
   const linkColor = useColorModeValue('gray.600', 'gray.200')
@@ -117,6 +124,7 @@ const DesktopNav = () => {
                 {navItem.label}
               </Box>
             </PopoverTrigger>
+
             {navItem.children && (
               <PopoverContent
                 border={0}
@@ -193,7 +201,6 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
         py={2}
         as="a"
         href={href ?? '#'}
-        display="flex"
         justifyContent="space-between"
         alignItems="center"
         _hover={{
@@ -243,24 +250,13 @@ interface NavItem {
 const NAV_ITEMS: Array<NavItem> = [
   {
     label: 'Accueil',
-    children: [
-      {
-        label: 'Notre page de bienvenue',
-        subLabel: 'Bienvenue sur notre site !',
-        href: '#',
-      },
-    ],
+    href: '#',
   },
   {
     label: 'Nos services',
-    children: [
-      {
-        label: 'Découvrir',
-        subLabel: 'Trouvez ce qui vous convient le mieux, nous somme là pour ça',
-        href: '#',
-      },
-
-    ],
+    href: '#',
   },
 ];
+
+
 

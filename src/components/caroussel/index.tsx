@@ -93,7 +93,7 @@ export default function CaptionCarousel() {
                 position="absolute"
                 right={side}
                 top={top}
-                transform={'translate(0%, -50%)'}
+                transform={'translate(0%, -0%)'}
                 zIndex={2}
                 onClick={() => slider?.slickNext()}>
                 <BiRightArrowAlt size="40px" />
@@ -102,31 +102,32 @@ export default function CaptionCarousel() {
             <Slider {...settings} ref={(slider) => setSlider(slider)}>
                 {cards.map((card, index) => (
                     <Box
-                        key={index}
-                        height={'3x1'}
-                        position="relative"
-                        backgroundPosition="center"
-                        backgroundRepeat="no-repeat"
-                        backgroundSize="cover"
-                        backgroundImage={`url(${card.image})`}>
-                        {/* This is the block you need to change, to customize the caption */}
-                        <Container size="container.lg" height="600px" position="relative">
-                            <Stack
-                                spacing={6}
-                                w={'full'}
-                                maxW={'lg'}
-                                position="absolute"
-                                top="50%"
-                                transform="translate(0, -50%)">
-                                <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
-                                    {card.title}
-                                </Heading>
-                                <Text fontSize={{ base: 'md', lg: 'lg' }} color="white">
-                                    {card.text}
-                                </Text>
-                            </Stack>
-                        </Container>
-                    </Box>
+                    key={index}
+                    color={'white'}
+                    height={'3x1'}
+                    position="relative"
+                    backgroundPosition={'center bottom'} // 
+                    backgroundRepeat="no-repeat"
+                    backgroundSize="cover"
+                    backgroundImage={`url(${card.image})`}>
+                    <Container size="container.lg" height="600px" position="relative">
+                        <Stack
+                            spacing={6}
+                            w={'full'}
+                            maxW={'lg'}
+                            position="absolute"
+                            top="50%"
+                            transform="translate(0, -50%)">
+                            <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
+                                {card.title}
+                            </Heading>
+                            <Text fontSize={{ base: 'md', lg: 'lg' }} color="white">
+                                {card.text}
+                            </Text>
+                        </Stack>
+                    </Container>
+                </Box>
+                
                 ))}
             </Slider>
         </Box>

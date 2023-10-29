@@ -2,7 +2,8 @@
 
 import { ReactElement } from 'react'
 import { Box, SimpleGrid, Icon, Text, Stack, Flex } from '@chakra-ui/react'
-import { FcAssistant, FcDonate, FcInTransit } from 'react-icons/fc'
+import { FcBusinessman, FcAssistant, FcClock } from 'react-icons/fc'; // Importations des icônes
+
 
 interface FeatureProps {
     title: string
@@ -35,26 +36,31 @@ export default function SimpleThreeColumns() {
         <Box p={20}>
             <SimpleGrid columns={{ base: 1, md: 3 }} spacing={20}>
                 <Feature
+                    icon={<Icon as={FcBusinessman} w={10} h={10} />}
+                    title={"Conseils d'Experts"}
+                    text={
+                        'Notre entreprise se distingue par ses conseils d\'experts. Nos professionnels sont là pour vous guider à chaque étape de votre projet de construction ou de rénovation. Nous partageons nos connaissances pour vous aider à prendre des décisions éclairées.'
+                    }
+                />
+
+                <Feature
                     icon={<Icon as={FcAssistant} w={10} h={10} />}
-                    title={'Lifetime Support'}
+                    title={'Accompagnement Personnalisé'}
                     text={
-                        'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...'
+                        "Notre entreprise est déterminée à vous fournir un accompagnement personnalisé tout au long de votre projet. Nous nous engageons à vous offrir un suivi attentif et à répondre à tous vos besoins pour assurer la réussite de votre projet."
                     }
                 />
+
                 <Feature
-                    icon={<Icon as={FcDonate} w={10} h={10} />}
-                    title={'Unlimited Donations'}
+                    icon={<Icon as={FcClock} w={10} h={10} />} // Icône de montre ou chrono
+                    title={'Respect des Délais'}
                     text={
-                        'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...'
+                        "Nous savons que le temps est précieux. Notre équipe garantit des délais d'exécution optimaux pour que vous puissiez profiter de votre espace rénové en un rien de temps."
                     }
                 />
-                <Feature
-                    icon={<Icon as={FcInTransit} w={10} h={10} />}
-                    title={'Instant Delivery'}
-                    text={
-                        'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...'
-                    }
-                />
+
+
+
             </SimpleGrid>
         </Box>
     )
