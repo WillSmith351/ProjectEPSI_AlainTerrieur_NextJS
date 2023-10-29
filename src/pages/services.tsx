@@ -88,7 +88,7 @@ export default function Home() {
         <Box p={6}>
           <Heading textAlign="center" mb={4}>Faites votre <Text color="#55BBFF" display="inline">simulation</Text> du prix de vos travaux</Heading>
 
-            <Heading as='h4' size='md' mb={4}>Choissisez le type de travaux</Heading>
+            <Heading as='h4' size='md' mb={4}>Choisissez le type de travaux</Heading>
             
             <Box display="flex" flexDirection="column">
               <Checkbox
@@ -150,7 +150,7 @@ export default function Home() {
             </Box>
 
             <Box mt={4}>
-              <Heading as='h4' size='md' mb={4}>Choissisez le type de prestation</Heading>
+              <Heading as='h4' size='md' mb={4}>Choisissez le type de prestation</Heading>
               <Box display="flex" flexDirection="column">
                 <Checkbox
                   isChecked={selectedType === 'classique'}
